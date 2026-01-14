@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chance Perpetuo | Qubic Protocol</title>
+    <style>
+        /* ESTILO VISUAL (DARK MODE) */
+        body {
+            background-color: #0d1117; 
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* CABECERA */
+        .header { margin-bottom: 40px; }
+        
+        /* EL JACKPOT */
+        .jackpot-box {
+            background: linear-gradient(45deg, #ff0055, #ffcc00);
+            padding: 20px;
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: 0 0 30px rgba(255, 165, 0, 0.6);
+            animation: palpitar 2s infinite;
+            margin-bottom: 30px;
+        }
+
+        @keyframes palpitar {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        /* SECCIÓN: ZONA DE LIBERTAD FINANCIERA (Educación + Cambio) */
+        .exchange-section {
+            background-color: #1c2128;
+            border: 1px solid #58a6ff;
+            box-shadow: 0 0 15px rgba(88, 166, 255, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            max-width: 600px;
+            margin: 0 auto 50px auto; /* Centrado */
+        }
+        
+        .exchange-title {
+            color: #58a6ff;
+            margin-top: 0;
+        }
+
+        /* WIDGET PLACEHOLDER */
+        .widget-placeholder {
+            background-color: #0d1117;
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px dashed #8b949e;
+            color: #8b949e;
+            margin-top: 15px;
+        }
+
+        /* LAS 3 SALAS */
+        .container-salas {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .sala-card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            transition: transform 0.3s;
+        }
+
+        .sala-card:hover {
+            transform: translateY(-10px);
+            border-color: #58a6ff;
+        }
+
+        .precio {
+            font-size: 24px;
+            font-weight: bold;
+            color: #58a6ff;
+            margin: 10px 0;
+        }
+
+        .btn-jugar {
+            background-color: #238636;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .btn-jugar:hover { background-color: #2ea043; }
+
+        .footer { margin-top: 50px; font-size: 12px; color: #8b949e; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>🎲 CHANCE PERPETUO</h1>
+        <p>Protocolo de Lotería Descentralizada en Qubic</p>
+        
+        <div class="jackpot-box">
+            <h2>💰 JACKPOT ACUMULADO</h2>
+            <h1 id="jackpot-counter">50,000 QUBICS</h1>
+            <small>¡Revienta en cualquier momento!</small>
+        </div>
+    </div>
+
+    <div class="exchange-section">
+        <h3 class="exchange-title">🛡️ ESCUDO CONTRA LA DEVALUACIÓN</h3>
+        
+        <div style="text-align: left; margin-bottom: 20px; font-size: 14px; line-height: 1.6;">
+            <p><strong>El problema:</strong> Los gobiernos imprimen billetes y tu dinero vale menos cada día.</p>
+            <p><strong>La solución:</strong></p>
+            <ol>
+                <li>Pásate a <strong>Dólar Digital (USDT/USDC)</strong> para proteger tus ahorros.</li>
+                <li>Cambia a <strong>QUBIC</strong> para entrar a la economía del futuro (0 comisiones).</li>
+                <li>Usa tus Qubics para jugar y ganar en el Chance Perpetuo.</li>
+            </ol>
+        </div>
+
+        <div class="widget-placeholder">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                <div>
+                    <span style="display:block; font-size:12px; color:#8b949e;">Tú entregas:</span>
+                    <strong style="font-size:18px;">USDT / USDC</strong>
+                </div>
+                <div style="font-size: 20px;">➡️</div>
+                <div>
+                    <span style="display:block; font-size:12px; color:#8b949e;">Recibes:</span>
+                    <strong style="font-size:18px; color: #ffcc00;">QUBIC</strong>
+                </div>
+            </div>
+            
+            <button class="btn-jugar" style="background-color: #1f6feb;">CONVERTIR AHORA</button>
+            <p><small>Powered by ChangeNow / SimpleSwap</small></p>
+        </div>
+        
+        <p style="margin-top: 15px; font-style: italic; color: #58a6ff; font-size: 13px;">
+            "La tecnología es la única frontera que los políticos no pueden cerrar."
+        </p>
+    </div>
+
+    <div class="container-salas">
+        
+        <div class="sala-card">
+            <h3>🚌 Sala Popular</h3>
+            <p>Juega con las vueltas.</p>
+            <div class="precio">1,000 QUBICS</div>
+            <button class="btn-jugar" onclick="alert('Abriendo Billetera...')">JUGAR</button>
+        </div>
+
+        <div class="sala-card" style="border-top: 3px solid #ffd700;">
+            <h3>💼 Sala Ejecutiva</h3>
+            <p>Gana tu almuerzo.</p>
+            <div class="precio">500,000 QUBICS</div>
+            <button class="btn-jugar" onclick="alert('Abriendo Billetera...')">JUGAR</button>
+        </div>
+
+        <div class="sala-card" style="border-top: 3px solid #ff0055;">
+            <h3>💎 Sala VIP</h3>
+            <p>Zona de Ballenas.</p>
+            <div class="precio">25 Millones</div>
+            <button class="btn-jugar" onclick="alert('Verificando ID...')">ACCESO VIP</button>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>🔒 Contrato Auditado: 0x8F3...9A1 | 🔥 Qubics Quemados: 1,204,500</p>
+        <p>Desarrollado por <strong>Abogado Guanes & Codex Analítica</strong></p>
+    </div>
+
+</body>
+</html>
