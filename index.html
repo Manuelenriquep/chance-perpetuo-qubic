@@ -55,10 +55,11 @@
         .widget-placeholder {
             background-color: #0d1117;
             border-radius: 10px;
-            padding: 20px;
+            padding: 0; /* Sin padding para que el iframe encaje */
             border: 1px dashed #8b949e;
             color: #8b949e;
             margin-top: 15px;
+            overflow: hidden;
         }
 
         /* LAS 3 SALAS */
@@ -134,7 +135,7 @@
             </ol>
         </div>
 
-        <div class="widget-placeholder" style="padding: 0; overflow: hidden;">
+        <div class="widget-placeholder">
             <iframe 
                 id="iframe-widget" 
                 src="https://changenow.io/embeds/exchange-widget/v2/widget.html?FAQ=true&amount=50&amountFiat=1500&backgroundColor=0d1117&darkMode=true&from=usdttrc20&fromFiat=usd&horizontal=false&isFiat=false&lang=es-ES&link_id=402484&locales=true&logo=false&primaryColor=58A6FF&to=qubic&toFiat=qubic&toTheMoon=true" 
@@ -142,10 +143,6 @@
             </iframe>
         </div>
         <p><small style="color: #8b949e;">*Transacción directa en Blockchain. Sin custodia.</small></p>
-            
-            <button class="btn-jugar" style="background-color: #1f6feb;">CONVERTIR AHORA</button>
-            <p><small>Powered by ChangeNow / SimpleSwap</small></p>
-        </div>
         
         <p style="margin-top: 15px; font-style: italic; color: #58a6ff; font-size: 13px;">
             "La tecnología es la única frontera que los políticos no pueden cerrar."
@@ -158,21 +155,21 @@
             <h3>🚌 Sala Popular</h3>
             <p>Juega con las vueltas.</p>
             <div class="precio">1,000 QUBICS</div>
-            <button class="btn-jugar" onclick="alert('Abriendo Billetera...')">JUGAR</button>
+            <button class="btn-jugar" onclick="jugar('Popular', 1000)">JUGAR AHORA</button>
         </div>
 
         <div class="sala-card" style="border-top: 3px solid #ffd700;">
             <h3>💼 Sala Ejecutiva</h3>
             <p>Gana tu almuerzo.</p>
             <div class="precio">500,000 QUBICS</div>
-            <button class="btn-jugar" onclick="alert('Abriendo Billetera...')">JUGAR</button>
+            <button class="btn-jugar" onclick="jugar('Ejecutiva', 500000)">JUGAR AHORA</button>
         </div>
 
         <div class="sala-card" style="border-top: 3px solid #ff0055;">
             <h3>💎 Sala VIP</h3>
             <p>Zona de Ballenas.</p>
             <div class="precio">25 Millones</div>
-            <button class="btn-jugar" onclick="alert('Verificando ID...')">ACCESO VIP</button>
+            <button class="btn-jugar" onclick="jugar('VIP', 25000000)">ACCESO VIP</button>
         </div>
 
     </div>
@@ -181,6 +178,36 @@
         <p>🔒 Contrato Auditado: 0x8F3...9A1 | 🔥 Qubics Quemados: 1,204,500</p>
         <p>Desarrollado por <strong>Abogado Guanes & Codex Analítica</strong></p>
     </div>
+
+    <script>
+        // CONFIGURACIÓN (Aquí pondremos la dirección real cuando despleguemos el contrato)
+        const CONTRACT_ADDRESS = "ESPERANDO_DESPLIEGUE_EN_RED_QUBIC"; 
+        
+        // FUNCIÓN PRINCIPAL: EL BOTÓN DE PAGO
+        async function jugar(sala, monto) {
+            console.log(`Iniciando protocolo para Sala: ${sala}`);
+            
+            // 1. EFECTO VISUAL (Feedback al usuario)
+            alert(`🔄 Conectando con la Blockchain Qubic...\n\nSALA: ${sala}\nVALOR: ${monto.toLocaleString()} QUBICS\n\n(En el futuro, esto abrirá tu billetera automáticamente)`);
+
+            // 2. LÓGICA DE INTEGRACIÓN (PREPARADO PARA EL FUTURO)
+            // Aquí iría el código real: qubic.sendTransaction(CONTRACT_ADDRESS, monto)...
+            
+            // Simulación de éxito para pruebas
+            setTimeout(() => {
+                console.log("Transacción enviada al mempool");
+            }, 1000);
+        }
+
+        // FUNCIÓN DEL JACKPOT (EFECTO VISUAL)
+        // Esto hace que el número del acumulado se mueva para dar sensación de vida
+        let jackpot = 50000;
+        setInterval(() => {
+            // Aumenta un poquito cada 3 segundos simulando gente jugando
+            jackpot += Math.floor(Math.random() * 10); 
+            document.getElementById('jackpot-counter').innerText = jackpot.toLocaleString() + " QUBICS";
+        }, 3000);
+    </script>
 
 </body>
 </html>
