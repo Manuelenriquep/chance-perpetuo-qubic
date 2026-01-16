@@ -1,213 +1,98 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chance Perpetuo | Qubic Protocol</title>
+    <title>Q-WIN Protocol | Decentralized Lottery</title>
     <style>
-        /* ESTILO VISUAL (DARK MODE) */
+        /* ESTILO "CYBER-CRYPTO" (Oscuro y Minimalista) */
         body {
-            background-color: #0d1117; 
-            color: #ffffff;
+            background-color: #0d1117; /* Fondo oscuro estilo GitHub/Qubic */
+            color: #c9d1d9; /* Texto gris claro */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
             margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 100px auto;
             padding: 20px;
         }
-
-        /* CABECERA */
-        .header { margin-bottom: 40px; }
-        
-        /* EL JACKPOT */
-        .jackpot-box {
-            background: linear-gradient(45deg, #ff0055, #ffcc00);
-            padding: 20px;
-            border-radius: 15px;
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            color: #ffffff;
+            letter-spacing: 2px;
+        }
+        .highlight {
+            color: #58a6ff; /* Azul Tech */
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        .btn {
             display: inline-block;
-            box-shadow: 0 0 30px rgba(255, 165, 0, 0.6);
-            animation: palpitar 2s infinite;
-            margin-bottom: 30px;
+            margin-top: 30px;
+            padding: 15px 30px;
+            background-color: #238636; /* Verde "Go" */
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+            font-size: 1.2rem;
+            transition: background 0.3s;
         }
-
-        @keyframes palpitar {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.03); }
-            100% { transform: scale(1); }
+        .btn:hover {
+            background-color: #2ea043;
         }
-
-        /* SECCIÓN: ZONA DE LIBERTAD FINANCIERA (Educación + Cambio) */
-        .exchange-section {
-            background-color: #1c2128;
-            border: 1px solid #58a6ff;
-            box-shadow: 0 0 15px rgba(88, 166, 255, 0.2);
-            border-radius: 15px;
-            padding: 25px;
-            max-width: 600px;
-            margin: 0 auto 50px auto; /* Centrado */
-        }
-        
-        .exchange-title {
-            color: #58a6ff;
-            margin-top: 0;
-        }
-
-        /* WIDGET PLACEHOLDER */
-        .widget-placeholder {
-            background-color: #0d1117;
-            border-radius: 10px;
-            padding: 0; /* Sin padding para que el iframe encaje */
-            border: 1px dashed #8b949e;
-            color: #8b949e;
-            margin-top: 15px;
-            overflow: hidden;
-        }
-
-        /* LAS 3 SALAS */
-        .container-salas {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .sala-card {
+        .status-box {
             background-color: #161b22;
             border: 1px solid #30363d;
-            border-radius: 10px;
             padding: 20px;
-            width: 250px;
-            transition: transform 0.3s;
+            border-radius: 6px;
+            margin-top: 40px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #7ee787; /* Verde Terminal */
         }
-
-        .sala-card:hover {
-            transform: translateY(-10px);
-            border-color: #58a6ff;
+        footer {
+            margin-top: 100px;
+            font-size: 0.8rem;
+            color: #8b949e;
+            border-top: 1px solid #30363d;
+            padding-top: 20px;
         }
-
-        .precio {
-            font-size: 24px;
-            font-weight: bold;
-            color: #58a6ff;
-            margin: 10px 0;
-        }
-
-        .btn-jugar {
-            background-color: #238636;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            width: 100%;
-            margin-top: 15px;
-            font-weight: bold;
-        }
-
-        .btn-jugar:hover { background-color: #2ea043; }
-
-        .footer { margin-top: 50px; font-size: 12px; color: #8b949e; }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1>🎲 CHANCE PERPETUO</h1>
-        <p>Protocolo de Lotería Descentralizada en Qubic</p>
+    <div class="container">
+        <h1>Q-WIN <span class="highlight">PROTOCOL</span></h1>
+        <p>The First Decentralized Lottery on Qubic Network.</p>
         
-        <div class="jackpot-box">
-            <h2>💰 JACKPOT ACUMULADO</h2>
-            <h1 id="jackpot-counter">50,000 QUBICS</h1>
-            <small>¡Revienta en cualquier momento!</small>
+        <div class="status-box">
+            <p>🟢 SYSTEM STATUS: ONLINE</p>
+            <p>🔗 NETWORK: QUBIC GLOBAL</p>
+            <p>💰 NEXT JACKPOT: 50,000 QU</p>
         </div>
+
+        <a href="#" class="btn">CONNECT WALLET (Coming Soon)</a>
+
+        <footer>
+            <p>© 2026 Q-WIN Protocol. All rights reserved.</p>
+            <br>
+            <p style="max-width: 600px; margin: 0 auto; text-align: justify;">
+                <strong>LEGAL DISCLAIMER:</strong> 
+                Q-WIN is a decentralized experimental software protocol running on the Qubic blockchain. 
+                This interface is provided "as is" without warranty of any kind. 
+                By interacting with this protocol, you acknowledge that you are participating in a verifiable randomness mechanism 
+                and assume all associated risks. Not available for users in restricted jurisdictions.
+                <br><br>
+                <em>Code is Law. Verify before you trust.</em>
+            </p>
+        </footer>
     </div>
-
-    <div class="exchange-section">
-        <h3 class="exchange-title">🛡️ ESCUDO CONTRA LA DEVALUACIÓN</h3>
-        
-        <div style="text-align: left; margin-bottom: 20px; font-size: 14px; line-height: 1.6;">
-            <p><strong>El problema:</strong> Los gobiernos imprimen billetes y tu dinero vale menos cada día.</p>
-            <p><strong>La solución:</strong></p>
-            <ol>
-                <li>Pásate a <strong>Dólar Digital (USDT/USDC)</strong> para proteger tus ahorros.</li>
-                <li>Cambia a <strong>QUBIC</strong> para entrar a la economía del futuro (0 comisiones).</li>
-                <li>Usa tus Qubics para jugar y ganar en el Chance Perpetuo.</li>
-            </ol>
-        </div>
-
-        <div class="widget-placeholder">
-            <iframe 
-                id="iframe-widget" 
-                src="https://changenow.io/embeds/exchange-widget/v2/widget.html?FAQ=true&amount=50&amountFiat=1500&backgroundColor=0d1117&darkMode=true&from=usdttrc20&fromFiat=usd&horizontal=false&isFiat=false&lang=es-ES&link_id=402484&locales=true&logo=false&primaryColor=58A6FF&to=qubic&toFiat=qubic&toTheMoon=true" 
-                style="height: 356px; width: 100%; border: none;">
-            </iframe>
-        </div>
-        <p><small style="color: #8b949e;">*Transacción directa en Blockchain. Sin custodia.</small></p>
-        
-        <p style="margin-top: 15px; font-style: italic; color: #58a6ff; font-size: 13px;">
-            "La tecnología es la única frontera que los políticos no pueden cerrar."
-        </p>
-    </div>
-
-    <div class="container-salas">
-        
-        <div class="sala-card">
-            <h3>🚌 Sala Popular</h3>
-            <p>Juega con las vueltas.</p>
-            <div class="precio">1,000 QUBICS</div>
-            <button class="btn-jugar" onclick="jugar('Popular', 1000)">JUGAR AHORA</button>
-        </div>
-
-        <div class="sala-card" style="border-top: 3px solid #ffd700;">
-            <h3>💼 Sala Ejecutiva</h3>
-            <p>Gana tu almuerzo.</p>
-            <div class="precio">500,000 QUBICS</div>
-            <button class="btn-jugar" onclick="jugar('Ejecutiva', 500000)">JUGAR AHORA</button>
-        </div>
-
-        <div class="sala-card" style="border-top: 3px solid #ff0055;">
-            <h3>💎 Sala VIP</h3>
-            <p>Zona de Ballenas.</p>
-            <div class="precio">25 Millones</div>
-            <button class="btn-jugar" onclick="jugar('VIP', 25000000)">ACCESO VIP</button>
-        </div>
-
-    </div>
-
-    <div class="footer">
-        <p>🔒 Contrato Auditado: 0x8F3...9A1 | 🔥 Qubics Quemados: 1,204,500</p>
-        <p>Desarrollado por <strong>Abogado Guanes & Codex Analítica</strong></p>
-    </div>
-
-    <script>
-        // CONFIGURACIÓN (Aquí pondremos la dirección real cuando despleguemos el contrato)
-        const CONTRACT_ADDRESS = "ESPERANDO_DESPLIEGUE_EN_RED_QUBIC"; 
-        
-        // FUNCIÓN PRINCIPAL: EL BOTÓN DE PAGO
-        async function jugar(sala, monto) {
-            console.log(`Iniciando protocolo para Sala: ${sala}`);
-            
-            // 1. EFECTO VISUAL (Feedback al usuario)
-            alert(`🔄 Conectando con la Blockchain Qubic...\n\nSALA: ${sala}\nVALOR: ${monto.toLocaleString()} QUBICS\n\n(En el futuro, esto abrirá tu billetera automáticamente)`);
-
-            // 2. LÓGICA DE INTEGRACIÓN (PREPARADO PARA EL FUTURO)
-            // Aquí iría el código real: qubic.sendTransaction(CONTRACT_ADDRESS, monto)...
-            
-            // Simulación de éxito para pruebas
-            setTimeout(() => {
-                console.log("Transacción enviada al mempool");
-            }, 1000);
-        }
-
-        // FUNCIÓN DEL JACKPOT (EFECTO VISUAL)
-        // Esto hace que el número del acumulado se mueva para dar sensación de vida
-        let jackpot = 50000;
-        setInterval(() => {
-            // Aumenta un poquito cada 3 segundos simulando gente jugando
-            jackpot += Math.floor(Math.random() * 10); 
-            document.getElementById('jackpot-counter').innerText = jackpot.toLocaleString() + " QUBICS";
-        }, 3000);
-    </script>
 
 </body>
 </html>
